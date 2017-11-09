@@ -1,0 +1,893 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Results</title>
+  <style>
+    /* Standard styles */
+
+    body {
+      font-family: "Aial", sans-serif;
+      background-color: #EAF4F9;
+      color: black;
+      margin: 0;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4 {
+      font-weight: bold;
+    }
+
+    p,
+    a,
+    table,
+    ul {
+      font-size: 12pt;
+    }
+
+    h4 {
+      font-size: 12pt;
+    }
+
+    h3 {
+      font-size: 14pt;
+    }
+
+    h2 {
+      font-size: 16pt;
+    }
+
+    h1 {
+      font-size: 24px;
+    }
+
+    tt {
+      font-family: "Liberation Mono", monospace;
+    }
+
+    tt {
+      font-size: 10pt;
+    }
+
+    main {
+      max-width: 620px;
+      margin: 0 auto;
+    }
+    /* Table styling */
+
+    table {
+      width: 100%;
+      font-size: 12px;
+    }
+
+    table,
+    th,
+    td {
+      border-collapse: collapse;
+    }
+
+    th,
+    td {
+      padding: 5px;
+    }
+
+    th {
+      background: #B5DEF2;
+      font-size: 14px;
+      text-align: left;
+    }
+
+    td:first-child,
+    th:first-child {
+      border-right: 1px solid #36A9E0;
+    }
+
+    td:last-child,
+    th:last-child {
+      border-left: 1px solid #36A9E0;
+    }
+
+    td {
+      background: white;
+      padding: 8px 10px;
+    }
+
+    tr:not(:last-child) {
+      border-bottom: 1px solid #36A9E0;
+    }
+    /* Title wrapper */
+
+    .title-wrapper {
+      background: white;
+      padding: 5px 0;
+    }
+
+    .title-wrapper h1 {
+      max-width: 620px;
+      margin: 0 auto;
+      color: #0577BD;
+    }
+
+    .title-wrapper h1>span {
+      color: #0D3C62;
+    }
+    /* Status wrapper */
+
+    .status-wrapper {
+      margin-top: 10px;
+    }
+
+    .status-wrapper td {
+      background: none;
+    }
+
+    .status-wrapper a {
+      text-decoration: none;
+      color: black;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    /* Status styles */
+
+    .failed {
+      background: #F1596B;
+      color: white;
+      font-weight: bold;
+    }
+    /* Traffic Lights */
+
+    [class^='circle'] {
+      width: 66px;
+      height: 66px;
+      border: 2px solid white;
+      border-radius: 100%;
+      color: white;
+      text-align: center;
+      font-size: 35px;
+      font-weight: bold;
+      line-height: 66px;
+    }
+
+    .circle__failed {
+      background: #F1596B;
+    }
+
+    .circle__failed:before {
+      content: '\002715'
+    }
+
+    .circle__warning {
+      background: #F6A623;
+    }
+
+    .circle__warning:before {
+      content: '\0021'
+    }
+
+    .circle__success {
+      background: #7ED321;
+    }
+
+    .circle__success:before {
+      content: '\002713'
+    }
+  </style>
+</head>
+<body>
+  <div class="title-wrapper">
+    <h1>Results from the script <span>'diffblue_check.py'</span></h1>
+  </div>
+  <main>
+    <table style="border:hidden" class="status-wrapper">
+      <tr style="border:hidden">
+        <td style="border:hidden" width="66px">
+           <div class="circle__failed"></div>
+        </td>
+        <td style="border:hidden">Your java application does not use Maven build system. See the section <a href="#java_app_statistics">Java Project Statistics</a> bellow.</td>
+      </tr>
+    </table>
+    <h2 id="system_requirements">Checking system requirements</h2>
+    <h2 id="java_app_statistics">Java Project Statistics</h2>
+    <table>
+      <col width="340">
+      <col width="280">
+      <tr>
+        <th>Property</th>
+        <th>Value</th>
+      </tr>
+      <tr>
+        <td>Path to the checked Java application</td>
+        <td>.</td>
+      </tr>
+      <tr>
+        <td>Uses Maven build system?</td>
+        <td class="failed">False</td>
+      </tr>
+      <tr>
+        <td>Number of Java classes</td>
+        <td>263</td>
+      </tr>
+      <tr>
+        <td>Number of methods in all classes</td>
+        <td>1975</td>
+      </tr>
+      <tr>
+        <td>Number of synchronized methods in all classes</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Number of volatile elements in all classes</td>
+        <td>0</td>
+      </tr>
+      <tr>
+        <td>Number of bytecodes in all methods</td>
+        <td>23761</td>
+      </tr>
+      <tr>
+        <td>Number of loops in all methods</td>
+        <td>72</td>
+      </tr>
+      <tr>
+        <td>Number of synchronized blocks in all methods</td>
+        <td>10</td>
+      </tr>
+      <tr>
+        <td>Number of calls to java.util.concurrent classes (atomic / locks / thread / remaining)</td>
+        <td>0 / 0 / 0 / 0</td>
+      </tr>
+      <tr>
+        <td>Number of calls to thread pool constructors (fixed / scheduled / fork_join)</td>
+        <td>0 / 0 / 0</td>
+      </tr>
+      <tr>
+        <td>Number of calls to object synchronizers (wait / timed wait / notify / notifyAll)</td>
+        <td>0 / 0 / 0 / 0</td>
+      </tr>
+      <tr>
+        <td>Number of calls to thread elements (start / sleep / interrupt / join)</td>
+        <td>0 / 0 / 0 / 0</td>
+      </tr>
+      <tr>
+        <td>Number of method calls within the Java application</td>
+        <td>890</td>
+      </tr>
+      <tr>
+        <td>Number of calls to the Java standard library</td>
+        <td>1318</td>
+      </tr>
+      <tr>
+        <td>Number of calls to other Java libraries</td>
+        <td>2937</td>
+      </tr>
+      <tr>
+        <td>Total number of calls in the Java application</td>
+        <td>5145</td>
+      </tr>
+      <tr>
+        <td>Number of calls to supported Java Standard Library functions</td>
+        <td>1133</td>
+      </tr>
+      <tr>
+        <td>Number of calls to unsupported Java Standard Library functions</td>
+        <td>185</td>
+      </tr>
+    </table>
+    <h2 id="non_modelled_library_calls">Calls to unsupported library functions</h2>
+    <table>
+      <col width="60">
+      <col width="660">
+      <col width="60">
+      <tr>
+        <th>#</th>
+        <th>Method name</th>
+        <th>#calls</th>
+      </tr>
+      <tr>
+        <td align="right">1</td>
+        <td>java/util/Arrays.asList:([Ljava/lang/Object;)Ljava/util/List;</td>
+        <td align="right">18</td>
+      </tr>
+      <tr>
+        <td align="right">2</td>
+        <td>java/net/URI.toString:()Ljava/lang/String;</td>
+        <td align="right">17</td>
+      </tr>
+      <tr>
+        <td align="right">3</td>
+        <td>java/util/HashMap."&lt;init&gt;":()V</td>
+        <td align="right">12</td>
+      </tr>
+      <tr>
+        <td align="right">4</td>
+        <td>java/util/LinkedList."&lt;init&gt;":()V</td>
+        <td align="right">10</td>
+      </tr>
+      <tr>
+        <td align="right">5</td>
+        <td>java/util/Collections.emptyList:()Ljava/util/List;</td>
+        <td align="right">9</td>
+      </tr>
+      <tr>
+        <td align="right">6</td>
+        <td>java/lang/Class.isAssignableFrom:(Ljava/lang/Class;)Z</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">7</td>
+        <td>java/util/BitSet.set:(I)V</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">8</td>
+        <td>java/net/URI."&lt;init&gt;":(Ljava/lang/String;)V</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">9</td>
+        <td>java/net/URI.getQuery:()Ljava/lang/String;</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">10</td>
+        <td>java/util/Collections.emptyMap:()Ljava/util/Map;</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">11</td>
+        <td>java/util/HashSet."&lt;init&gt;":()V</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">12</td>
+        <td>java/util/HashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">13</td>
+        <td>java/util/HashSet."&lt;init&gt;":(Ljava/util/Collection;)V</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">14</td>
+        <td>java/lang/Exception.getMessage:()Ljava/lang/String;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">15</td>
+        <td>java/net/URI.getPort:()I</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">16</td>
+        <td>java/net/URI.getScheme:()Ljava/lang/String;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">17</td>
+        <td>java/net/URLEncoder.encode:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">18</td>
+        <td>java/util/BitSet."&lt;init&gt;":(I)V</td>
+        <td align="right">3</td>
+      </tr>
+      <tr>
+        <td align="right">19</td>
+        <td>java/util/Base64$Encoder.encode:([B)[B</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">20</td>
+        <td>java/util/Base64.getEncoder:()Ljava/util/Base64$Encoder;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">21</td>
+        <td>java/util/BitSet.or:(Ljava/util/BitSet;)V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">22</td>
+        <td>java/util/Collections.sort:(Ljava/util/List;)V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">23</td>
+        <td>java/util/Collections.unmodifiableMap:(Ljava/util/Map;)Ljava/util/Map;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">24</td>
+        <td>java/util/HashMap."&lt;init&gt;":(IF)V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">25</td>
+        <td>java/util/HashMap."&lt;init&gt;":(Ljava/util/Map;)V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">26</td>
+        <td>java/util/LinkedHashMap."&lt;init&gt;":(I)V</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">27</td>
+        <td>java/util/Properties.getProperty:(Ljava/lang/String;)Ljava/lang/String;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">28</td>
+        <td>java/util/Properties.remove:(Ljava/lang/Object;)Ljava/lang/Object;</td>
+        <td align="right">2</td>
+      </tr>
+      <tr>
+        <td align="right">29</td>
+        <td>java/io/IOException.getMessage:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">30</td>
+        <td>java/io/InputStreamReader."&lt;init&gt;":(Ljava/io/InputStream;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">31</td>
+        <td>java/io/PrintWriter.write:(Ljava/lang/String;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">32</td>
+        <td>java/lang/reflect/Method.invoke:(Ljava/lang/Object;[Ljava/lang/Object;)Ljava/lang/Object;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">33</td>
+        <td>java/lang/reflect/Proxy.newProxyInstance:(Ljava/lang/ClassLoader;[Ljava/lang/Class;Ljava/lang/reflect/InvocationHandler;)Ljava/lang/Object;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">34</td>
+        <td>java/net/InetSocketAddress."&lt;init&gt;":(Ljava/lang/String;I)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">35</td>
+        <td>java/net/Proxy."&lt;init&gt;":(Ljava/net/Proxy$Type;Ljava/net/SocketAddress;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">36</td>
+        <td>java/net/URI."&lt;init&gt;":(Ljava/lang/String;Ljava/lang/String;Ljava/lang/String;ILjava/lang/String;Ljava/lang/String;Ljava/lang/String;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">37</td>
+        <td>java/net/URI.create:(Ljava/lang/String;)Ljava/net/URI;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">38</td>
+        <td>java/net/URI.getHost:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">39</td>
+        <td>java/net/URI.getPath:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">40</td>
+        <td>java/net/URI.getRawQuery:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">41</td>
+        <td>java/net/URL.toString:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">42</td>
+        <td>java/net/URLDecoder.decode:(Ljava/lang/String;Ljava/lang/String;)Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">43</td>
+        <td>java/security/KeyManagementException.printStackTrace:()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">44</td>
+        <td>java/security/KeyStore.getDefaultType:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">45</td>
+        <td>java/security/KeyStore.getInstance:(Ljava/lang/String;)Ljava/security/KeyStore;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">46</td>
+        <td>java/security/KeyStoreException.printStackTrace:()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">47</td>
+        <td>java/security/NoSuchAlgorithmException.printStackTrace:()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">48</td>
+        <td>java/util/BitSet.get:(I)Z</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">49</td>
+        <td>java/util/Collections.emptySet:()Ljava/util/Set;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">50</td>
+        <td>java/util/Collections.unmodifiableCollection:(Ljava/util/Collection;)Ljava/util/Collection;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">51</td>
+        <td>java/util/Collections.unmodifiableList:(Ljava/util/List;)Ljava/util/List;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">52</td>
+        <td>java/util/Collections.unmodifiableSet:(Ljava/util/Set;)Ljava/util/Set;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">53</td>
+        <td>java/util/HashMap."&lt;init&gt;":(I)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">54</td>
+        <td>java/util/HashSet.add:(Ljava/lang/Object;)Z</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">55</td>
+        <td>java/util/LinkedHashMap.put:(Ljava/lang/Object;Ljava/lang/Object;)Ljava/lang/Object;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">56</td>
+        <td>java/util/LinkedHashSet."&lt;init&gt;":()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">57</td>
+        <td>java/util/Properties.containsKey:(Ljava/lang/Object;)Z</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">58</td>
+        <td>java/util/Random."&lt;init&gt;":()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">59</td>
+        <td>java/util/Random.nextInt:()I</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">60</td>
+        <td>java/util/TreeMap."&lt;init&gt;":()V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">61</td>
+        <td>java/util/TreeMap."&lt;init&gt;":(Ljava/util/Comparator;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">62</td>
+        <td>java/util/TreeMap."&lt;init&gt;":(Ljava/util/Map;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">63</td>
+        <td>java/util/UUID.randomUUID:()Ljava/util/UUID;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">64</td>
+        <td>java/util/UUID.toString:()Ljava/lang/String;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">65</td>
+        <td>javax/crypto/Mac.doFinal:([B)[B</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">66</td>
+        <td>javax/crypto/Mac.getInstance:(Ljava/lang/String;)Ljavax/crypto/Mac;</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">67</td>
+        <td>javax/crypto/Mac.init:(Ljava/security/Key;)V</td>
+        <td align="right">1</td>
+      </tr>
+      <tr>
+        <td align="right">68</td>
+        <td>javax/crypto/spec/SecretKeySpec."&lt;init&gt;":([BLjava/lang/String;)V</td>
+        <td align="right">1</td>
+      </tr>
+    </table>
+    <h2 id="other_library_calls">Other library classes used</h2>
+    <table>
+      <col width="60">
+      <col width="660">
+      <col width="60">
+      <tr>
+        <th>#</th>
+        <th>Class name</th>
+        <th>#calls</th>
+      </tr>
+      <tr>
+        <td align="right">1</td>
+        <td>org/junit/Assert</td>
+        <td align="right">374</td>
+      </tr>
+      <tr>
+        <td align="right">2</td>
+        <td>org/springframework/mock/web/MockHttpServletRequest</td>
+        <td align="right">138</td>
+      </tr>
+      <tr>
+        <td align="right">3</td>
+        <td>org/mockito/Mockito</td>
+        <td align="right">98</td>
+      </tr>
+      <tr>
+        <td align="right">4</td>
+        <td>org/springframework/social/connect/ConnectionData</td>
+        <td align="right">87</td>
+      </tr>
+      <tr>
+        <td align="right">5</td>
+        <td>org/springframework/social/support/URIBuilder</td>
+        <td align="right">54</td>
+      </tr>
+      <tr>
+        <td align="right">6</td>
+        <td>org/springframework/util/LinkedMultiValueMap</td>
+        <td align="right">49</td>
+      </tr>
+      <tr>
+        <td align="right">7</td>
+        <td>org/springframework/social/connect/ConnectionKey</td>
+        <td align="right">46</td>
+      </tr>
+      <tr>
+        <td align="right">8</td>
+        <td>org/springframework/social/connect/support/ConnectionFactoryRegistry</td>
+        <td align="right">41</td>
+      </tr>
+      <tr>
+        <td align="right">9</td>
+        <td>org/springframework/test/web/servlet/result/MockMvcResultMatchers</td>
+        <td align="right">39</td>
+      </tr>
+      <tr>
+        <td align="right">10</td>
+        <td>org/springframework/util/Assert</td>
+        <td align="right">35</td>
+      </tr>
+      <tr>
+        <td align="right">11</td>
+        <td>org/springframework/web/client/RestTemplate</td>
+        <td align="right">27</td>
+      </tr>
+      <tr>
+        <td align="right">12</td>
+        <td>org/springframework/test/web/client/match/MockRestRequestMatchers</td>
+        <td align="right">25</td>
+      </tr>
+      <tr>
+        <td align="right">13</td>
+        <td>org/springframework/beans/factory/support/BeanDefinitionBuilder</td>
+        <td align="right">24</td>
+      </tr>
+      <tr>
+        <td align="right">14</td>
+        <td>org/springframework/http/HttpHeaders</td>
+        <td align="right">24</td>
+      </tr>
+      <tr>
+        <td align="right">15</td>
+        <td>org/springframework/social/connect/ConnectionFactory</td>
+        <td align="right">24</td>
+      </tr>
+      <tr>
+        <td align="right">16</td>
+        <td>org/springframework/test/web/servlet/result/RequestResultMatchers</td>
+        <td align="right">20</td>
+      </tr>
+      <tr>
+        <td align="right">17</td>
+        <td>org/springframework/social/connect/web/test/StubConnectionRepository</td>
+        <td align="right">19</td>
+      </tr>
+      <tr>
+        <td align="right">18</td>
+        <td>org/hamcrest/Matchers</td>
+        <td align="right">18</td>
+      </tr>
+      <tr>
+        <td align="right">19</td>
+        <td>org/springframework/social/connect/support/OAuth2ConnectionFactory</td>
+        <td align="right">17</td>
+      </tr>
+      <tr>
+        <td align="right">20</td>
+        <td>org/hamcrest/CoreMatchers</td>
+        <td align="right">15</td>
+      </tr>
+      <tr>
+        <td align="right">21</td>
+        <td>org/springframework/social/connect/web/test/StubUsersConnectionRepository</td>
+        <td align="right">14</td>
+      </tr>
+      <tr>
+        <td align="right">22</td>
+        <td>org/springframework/social/connect/UserProfileBuilder</td>
+        <td align="right">13</td>
+      </tr>
+      <tr>
+        <td align="right">23</td>
+        <td>org/springframework/social/connect/support/OAuth1ConnectionFactory</td>
+        <td align="right">13</td>
+      </tr>
+      <tr>
+        <td align="right">24</td>
+        <td>org/springframework/test/web/servlet/request/MockMvcRequestBuilders</td>
+        <td align="right">12</td>
+      </tr>
+      <tr>
+        <td align="right">25</td>
+        <td>org/springframework/util/ClassUtils</td>
+        <td align="right">12</td>
+      </tr>
+      <tr>
+        <td align="right">26</td>
+        <td>org/springframework/test/web/servlet/request/MockHttpServletRequestBuilder</td>
+        <td align="right">11</td>
+      </tr>
+      <tr>
+        <td align="right">27</td>
+        <td>org/springframework/util/StringUtils</td>
+        <td align="right">11</td>
+      </tr>
+      <tr>
+        <td align="right">28</td>
+        <td>org/springframework/jdbc/core/JdbcTemplate</td>
+        <td align="right">9</td>
+      </tr>
+      <tr>
+        <td align="right">29</td>
+        <td>org/springframework/mock/web/MockHttpServletResponse</td>
+        <td align="right">9</td>
+      </tr>
+      <tr>
+        <td align="right">30</td>
+        <td>org/springframework/social/connect/web/test/StubOAuth2ConnectionFactory</td>
+        <td align="right">9</td>
+      </tr>
+      <tr>
+        <td align="right">31</td>
+        <td>org/springframework/test/web/client/MockRestServiceServer</td>
+        <td align="right">9</td>
+      </tr>
+      <tr>
+        <td align="right">32</td>
+        <td>org/springframework/http/converter/FormHttpMessageConverter</td>
+        <td align="right">8</td>
+      </tr>
+      <tr>
+        <td align="right">33</td>
+        <td>org/springframework/social/oauth2/AccessGrant</td>
+        <td align="right">8</td>
+      </tr>
+      <tr>
+        <td align="right">34</td>
+        <td>org/springframework/aop/aspectj/annotation/AspectJProxyFactory</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">35</td>
+        <td>org/springframework/beans/factory/xml/ParserContext</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">36</td>
+        <td>org/springframework/social/oauth2/OAuth2Parameters</td>
+        <td align="right">7</td>
+      </tr>
+      <tr>
+        <td align="right">37</td>
+        <td>org/apache/http/impl/client/HttpClientBuilder</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">38</td>
+        <td>org/springframework/beans/factory/config/BeanDefinitionHolder</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">39</td>
+        <td>org/springframework/http/MediaType</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">40</td>
+        <td>org/springframework/security/authentication/AbstractAuthenticationToken</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">41</td>
+        <td>org/springframework/social/connect/web/test/StubOAuth1ConnectionFactory</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">42</td>
+        <td>org/springframework/web/client/HttpClientErrorException</td>
+        <td align="right">6</td>
+      </tr>
+      <tr>
+        <td align="right">43</td>
+        <td>org/springframework/http/client/SimpleClientHttpRequestFactory</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">44</td>
+        <td>org/springframework/http/converter/StringHttpMessageConverter</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">45</td>
+        <td>org/springframework/jdbc/datasource/embedded/EmbeddedDatabaseFactory</td>
+        <td align="right">5</td>
+      </tr>
+      <tr>
+        <td align="right">46</td>
+        <td>org/springframework/aop/scope/ScopedProxyUtils</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">47</td>
+        <td>org/springframework/jdbc/core/namedparam/NamedParameterJdbcTemplate</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">48</td>
+        <td>org/springframework/social/security/test/ArgMatchers</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">49</td>
+        <td>org/springframework/web/util/UriComponentsBuilder</td>
+        <td align="right">4</td>
+      </tr>
+      <tr>
+        <td align="right">50</td>
+        <td>org/apache/http/ssl/SSLContextBuilder</td>
+        <td align="right">3</td>
+      </tr>
+    </table>
+    <p>NOTE: the table shows the first 50 most popular calls out of 506 calls.</p>
+  </main>
+</body>
+</html>
