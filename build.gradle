@@ -24,6 +24,16 @@ configure(allprojects) {
     apply plugin: "idea"
     apply plugin: "javadocHotfix"
     apply plugin: "maven"
+    apply plugin: "jacoco"
+    
+    jacocoTestReport {
+    group = "Reporting"
+    reports {
+        xml.enabled true
+        csv.enabled false
+        html.destination "${buildDir}/reports/coverage"
+      }
+    }
 
     compileJava {
         sourceCompatibility=1.8
